@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		JVM 内存布局 | 
+	 
+	Hexo
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Hexo</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										db
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mongodb
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mongodb/%E8%84%9A%E6%9C%AC/">
+										脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mysql
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/sql/">
+										sql
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/">
+										运维操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/redis%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+										redis基础操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97/">
+										延时队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/jkd8/">
+										jkd8
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/">
+										字符集与编码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E9%94%81/">
+										锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										jvm
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/03/05/jvm/JVM%20%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/">
+										JVM 内存布局
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/class%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+										class 文件结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										jvm-垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%B8%B8%E9%87%8F%E6%B1%A0/">
+										jvm-常量池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm%E7%B1%BB%E5%8A%A0%E8%BD%BD/">
+										jvm类加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/linux%20%E5%AD%A6%E4%B9%A0/">
+										linux 学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
+										内存溢出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%80%BB%E7%BB%93/">
+										总结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%8C%87%E4%BB%A4/">
+										指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/">
+										虚拟机性能监控工具
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist/">
+										todolist
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist2/">
+										todolist2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop/hadoop%E5%AE%89%E8%A3%85/">
+										hadoop安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hbase
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hbase/hbase%E5%AE%89%E8%A3%85/">
+										hbase安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/docker/docker%E5%9F%BA%E7%A1%80/">
+										docker基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										idea
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/idea%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/">
+										idea项目简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/java%E5%90%AF%E5%8A%A8/">
+										java启动
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/linux/%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+										脚本学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E5%9F%BA%E7%A1%80/">
+										maven基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E9%AB%98%E7%BA%A7/">
+										maven高级
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
+										常用操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/">
+										开发手册
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										框架
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mybatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/mybatis/mybatis%E6%BA%90%E7%A0%81/">
+										mybatis源码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring cloud
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%20alibaba/">
+										spring cloud alibaba
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%E5%9F%BA%E7%A1%80/">
+										spring cloud基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/%E7%AC%94%E8%AE%B0/">
+										笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring mvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%B8%80/">
+										spring mvc源码一
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%BA%8C/">
+										spring mvc源码二
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tomcat
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/servlet-filter-listener/">
+										servlet-filter-listener
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/session-cookies/">
+										session-cookies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										登录认证
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/JWT/">
+										JWT
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/oauth2/">
+										oauth2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/spring%20security/">
+										spring security
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										消息队列
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										kafka
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/kafka/kafka%E5%9F%BA%E7%A1%80/">
+										kafka基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	JVM 内存布局
+</h1>
+<div class="article-meta">
+	
+	<span>John Doe</span>
+	<span>2021-03-05 15:15:19</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<img src="E:\笔记\pic\image-20200926183838697.png" alt="image-20200926183838697" style="zoom: 67%;" />
+
+
+
+<h1 id="运行时数据区"><a href="#运行时数据区" class="headerlink" title="运行时数据区"></a>运行时数据区</h1><h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2><ol>
+<li>单个线程<strong>指定的栈深（-Xss128k）</strong>太小时 StackOverflowError。</li>
+<li>栈通常<strong>支持动态扩容</strong>，如果扩容时无法申请到更多的内存，OutOfMemoryError</li>
+</ol>
+<h2 id="虚拟机栈"><a href="#虚拟机栈" class="headerlink" title="虚拟机栈"></a>虚拟机栈</h2><h2 id="方法区（非堆）"><a href="#方法区（非堆）" class="headerlink" title="方法区（非堆）"></a>方法区（非堆）</h2><p>​    <strong>永久代是永久代，方法区是方法区。永久代在堆里面，是jdk1.7 中堆的一种类型的内存名称， 只不过为了方便方法区的垃圾回收，因此采用永久代的垃圾回收方式，对方法区进行垃圾回收</strong></p>
+<blockquote>
+<p>jdk1.7之前用永久代(PermGen space)的方式实现，1.8之后才有元数据的方式实现，元数据(metaspace)不再保存在虚拟机中，而是保存在直接内存中</p>
+</blockquote>
+<p><strong>异常</strong>：java.lang.OutOfMemoryError: PermGen space</p>
+<h2 id="java堆"><a href="#java堆" class="headerlink" title="java堆"></a>java堆</h2><h1 id="常量池"><a href="#常量池" class="headerlink" title="常量池"></a>常量池</h1><h2 id="Class文件常量池："><a href="#Class文件常量池：" class="headerlink" title="Class文件常量池："></a>Class文件常量池：</h2><blockquote>
+<p>包括  字面量 和 符号引用</p>
+</blockquote>
+<h2 id="运行时常量池：jdk1-8之前在方法区、1-8及-之后在元空间"><a href="#运行时常量池：jdk1-8之前在方法区、1-8及-之后在元空间" class="headerlink" title="运行时常量池：jdk1.8之前在方法区、1.8及 之后在元空间"></a>运行时常量池：jdk1.8之前在方法区、1.8及 之后在元空间</h2><blockquote>
+<p> 字面量：简单点就是在java中，不需要通过new关键字来创建的一类数据。属于java的基本值，入short、int、long、byte、char、boolean、float、double，还有String ，创建这些变量的时候，不需要通过new </p>
+<p>常量：任何具有不可变的东西我们都称之为常量</p>
+<blockquote>
+<p>字符串是常量、不可修改问题。<br>String 被final修饰，只是限定了String 不能被继承，<br>关键属性：字符串数组 被private final修饰 只是说 该属性不能被外部引用，引起逃逸，在内部不能指向其他内存，但是其他对象获得该块内存的引用之后，依然可以对该块内存进行修改，从而达到修改该字符串的目的。而String在设计的时候，提供给外部调用的方法中，就限定了这样一种操作。</p>
+</blockquote>
+<blockquote>
+<p>java中很多东西都是设计成不变的，比如：一个类的名字，一个类字段的名字/所属类型，一个类方法的名字/返回类型/参数名与所属类型，一个常量，还有在程序中出现的大量的字面值。</p>
+<p>Java 中<strong>静态常量池</strong> 和 <strong>运行时常量池</strong>并非特指保存 final 常量，它还保存诸如字面量、类和接口全限定名、字段、方法名称、修饰符等永恒不变的东西。</p>
+</blockquote>
+</blockquote>
+<h2 id="字符串池：jdk1-7之前放在方法区，1-7-及之后放在堆"><a href="#字符串池：jdk1-7之前放在方法区，1-7-及之后放在堆" class="headerlink" title="字符串池：jdk1.7之前放在方法区，1.7 及之后放在堆"></a>字符串池：jdk1.7之前放在方法区，1.7 及之后放在堆</h2><blockquote>
+<p>字符串池的实现-StringTable<br>在jdk1.7之前，String.intern() 会将字符串保存到方法区的字符串常量池中，容易引起内存溢出，所以将其移动到堆中</p>
+</blockquote>
+<h1 id="符号引用与直接引用"><a href="#符号引用与直接引用" class="headerlink" title="符号引用与直接引用"></a>符号引用与直接引用</h1><ol>
+<li><strong>符号引用：</strong><br>在编译的时候，编译器分析java文件，将java中的 字面量、类和接口全限定名、字段、方法名称、修饰符 提取出来，形成一张常量表【相当于一个数组，通过下标引用】，此时对常量的编号就是符号引用。  在2个类中存在相同的字面量时，他们的符号引用可能不一样，不同类内部的符号引用，彼此没有关系</li>
+<li><strong>直接引用：</strong>直接引用可以是直接指向目标的指针</li>
+</ol>
+<h1 id="jvm对象的内存布局"><a href="#jvm对象的内存布局" class="headerlink" title="jvm对象的内存布局"></a>jvm对象的内存布局</h1><p><img src="https://img-blog.csdnimg.cn/20200802215209702.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200802215239889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21lbmd4aWFuZ3FpaGFuZ3o=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020080221525726.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21lbmd4aWFuZ3FpaGFuZ3o=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/03/05/jvm/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  jvm-垃圾回收
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/03/05/jvm/class%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+                class 文件结构
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">John Doe</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

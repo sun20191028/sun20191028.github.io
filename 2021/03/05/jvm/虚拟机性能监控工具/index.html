@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		虚拟机性能监控工具 | 
+	 
+	Hexo
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Hexo</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										db
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mongodb
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mongodb/%E8%84%9A%E6%9C%AC/">
+										脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mysql
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/sql/">
+										sql
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/">
+										运维操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/redis%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+										redis基础操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97/">
+										延时队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/jkd8/">
+										jkd8
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/">
+										字符集与编码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E9%94%81/">
+										锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										jvm
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/JVM%20%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/">
+										JVM 内存布局
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/class%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+										class 文件结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										jvm-垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%B8%B8%E9%87%8F%E6%B1%A0/">
+										jvm-常量池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm%E7%B1%BB%E5%8A%A0%E8%BD%BD/">
+										jvm类加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/linux%20%E5%AD%A6%E4%B9%A0/">
+										linux 学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
+										内存溢出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%80%BB%E7%BB%93/">
+										总结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%8C%87%E4%BB%A4/">
+										指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/03/05/jvm/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/">
+										虚拟机性能监控工具
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist/">
+										todolist
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist2/">
+										todolist2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop/hadoop%E5%AE%89%E8%A3%85/">
+										hadoop安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hbase
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hbase/hbase%E5%AE%89%E8%A3%85/">
+										hbase安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/docker/docker%E5%9F%BA%E7%A1%80/">
+										docker基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										idea
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/idea%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/">
+										idea项目简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/java%E5%90%AF%E5%8A%A8/">
+										java启动
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/linux/%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+										脚本学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E5%9F%BA%E7%A1%80/">
+										maven基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E9%AB%98%E7%BA%A7/">
+										maven高级
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
+										常用操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/">
+										开发手册
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										框架
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mybatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/mybatis/mybatis%E6%BA%90%E7%A0%81/">
+										mybatis源码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring cloud
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%20alibaba/">
+										spring cloud alibaba
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%E5%9F%BA%E7%A1%80/">
+										spring cloud基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/%E7%AC%94%E8%AE%B0/">
+										笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring mvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%B8%80/">
+										spring mvc源码一
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%BA%8C/">
+										spring mvc源码二
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tomcat
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/servlet-filter-listener/">
+										servlet-filter-listener
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/session-cookies/">
+										session-cookies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										登录认证
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/JWT/">
+										JWT
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/oauth2/">
+										oauth2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/spring%20security/">
+										spring security
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										消息队列
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										kafka
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/kafka/kafka%E5%9F%BA%E7%A1%80/">
+										kafka基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	虚拟机性能监控工具
+</h1>
+<div class="article-meta">
+	
+	<span>John Doe</span>
+	<span>2021-03-05 15:15:19</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<p>ps -eL|grep 2871 |sort -k4 -r<br>printf “%x\n” 3535<br>jstack -l 2871 |grep -C20 –color dcf</p>
+<h1 id="参数设置"><a href="#参数设置" class="headerlink" title="参数设置"></a>参数设置</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 格式</span></span><br><span class="line">-XX:+&lt;option&gt;    表示开启option选项</span><br><span class="line">-XX:-&lt;option&gt;    表示关闭option选项</span><br><span class="line">-XX:&lt;option&gt;=value   表示将option选项的值设置为value</span><br></pre></td></tr></table></figure>
+
+<h2 id="内存控制参数"><a href="#内存控制参数" class="headerlink" title="内存控制参数"></a>内存控制参数</h2><blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-Xss128k</td>
+<td>每个线程的堆栈大小，jdk1.5以后默认 1M</td>
+</tr>
+<tr>
+<td>-XX:PermSize=4m -XX:MaxPermSize=16m</td>
+<td>设置永久代初始大小 和最大值</td>
+</tr>
+<tr>
+<td>-XX:MetaspaceSize=64M -XX:MaxMetaspaceSize=128M</td>
+<td>元空间大小</td>
+</tr>
+<tr>
+<td>-Xms30M -Xmx60M</td>
+<td>堆内存设置</td>
+</tr>
+<tr>
+<td>-Xmn10M</td>
+<td>年轻代内存设置，通常占新生代的1/3</td>
+</tr>
+<tr>
+<td>-XX:NewRatio=2</td>
+<td>设置年轻代与年老代的比值，年老代与轻代所占比值为2：1，年轻代占整个堆栈的1/3</td>
+</tr>
+<tr>
+<td>-XX:SurvivorRatio=8</td>
+<td>Eden区与Survivor区的比值，则两个Survivor区与一个Eden区的比值为2:8，<br />一个Survivor区占整个年轻代的1/10</td>
+</tr>
+<tr>
+<td>-XX:MaxTenuringThreshold=0</td>
+<td>对象晋升到老年代的年龄阈值 <br />如果设置为0的话，则年轻代对象不经过Survivor区，直接进入年老代，<br /><strong>对于年老代比较多的应用，可以提高效率</strong>,<br />如果将此值设置为一个较大值，则年轻代对象会在Survivor区进行多次复制，<br />这样可以增加对象在年轻代的存活时间<br /><strong>CMS默认是6，G1默认是15</strong></td>
+</tr>
+<tr>
+<td>-XX:PretenureSizeThreshold</td>
+<td>-XX:PretenureSizeThreshold=3145728指定大于改值的 对象，直接进入老年代 (只在Serial和ParNew 中有效)</td>
+</tr>
+</tbody></table>
+</blockquote>
+<blockquote>
+<p>|||</p>
+</blockquote>
+<h2 id="指定垃圾回收器"><a href="#指定垃圾回收器" class="headerlink" title="指定垃圾回收器"></a>指定垃圾回收器</h2><blockquote>
+<p>-XX:+UseParNewGC<br>-XX:+UseSerialGC，虚拟机运行在Client模式下的默认值，Serial+Serial Old。<br>-XX:+UseParNewGC，ParNew+Serial Old，在JDK1.8被废弃，在JDK1.7还可以使用。<br>-XX:+UseConcMarkSweepGC，ParNew+CMS+Serial Old。<br>-XX:+UseParallelGC，虚拟机运行在Server模式下的默认值，Parallel Scavenge+Serial Old(PS Mark Sweep)。<br>-XX:+UseParallelOldGC，Parallel Scavenge+Parallel Old。<br>-XX:+UseG1GC，G1+G1。</p>
+</blockquote>
+<p><img src="E:\笔记\pic\image-20200926183713251.png" alt="image-20200926183713251"></p>
+<p><strong>JVM会把未用到的空间标注为Virtual</strong></p>
+<img src="E:\笔记\pic\image-20201123233018064.png" alt="image-20201123233018064" style="zoom:50%;" />
+
+<h2 id="打印gc日志"><a href="#打印gc日志" class="headerlink" title="打印gc日志"></a>打印gc日志</h2><blockquote>
+<p>-XX:+PrintHeapAtGC<br>-XX:+PrintGC 与 -verbose:gc   作用一样  打印eden区  gc信息<br>-XX:+PrintGCDetails</p>
+</blockquote>
+<h2 id="内存溢出自动输出dump文件"><a href="#内存溢出自动输出dump文件" class="headerlink" title="内存溢出自动输出dump文件"></a>内存溢出自动输出dump文件</h2><p>-verbose:gc -Xms20M -Xmx20M -Xmn10m -XX:+HeapDumpOnOutOfMemoryError<br>然后交由eclipse 分析</p>
+<h2 id="类加载和卸载信息"><a href="#类加载和卸载信息" class="headerlink" title="类加载和卸载信息"></a>类加载和卸载信息</h2><p>-verbose:class 以及 -XX:+TraceClassLoading、-XX:+TraceClassUnLoading</p>
+<p>==============================================================================================================</p>
+<h1 id="jps"><a href="#jps" class="headerlink" title="jps"></a>jps</h1><p><strong>跟ps -ef   和 ps aux 其实差不多 ，只不过 jps只展示 java进程</strong></p>
+<blockquote>
+<p><strong>虚拟机进程状况查看工具 [jvm process status tool]</strong></p>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>涵义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>jps</td>
+<td>显示进程的ID 和 类的名称</td>
+</tr>
+<tr>
+<td>jps -q</td>
+<td>只输出进程ID，而不显示出类的名称</td>
+</tr>
+<tr>
+<td>jps -l</td>
+<td>输出主类的全名，如果进程执行的是Jar包，输出jar包路径</td>
+</tr>
+<tr>
+<td>jps -m</td>
+<td>输出虚拟机进程启动时传递给主类main(() 函数的参数</td>
+</tr>
+<tr>
+<td><strong>jps -v</strong></td>
+<td><strong>输出虚拟机进程启动时JVM参数</strong></td>
+</tr>
+</tbody></table>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[tospouter01@webtest ~]$ jps</span><br><span class="line">19993 ConsumerServiceStart</span><br><span class="line">11626 Jps</span><br><span class="line">2588 jar</span><br><span class="line">10510 DubboServiceStart</span><br><span class="line">[tospouter01@webtest ~]$ jps -l</span><br><span class="line">19993 com.ai.runner.dmp.outer.kafka.appservice.ConsumerServiceStart</span><br><span class="line">11659 sun.tools.jps.Jps</span><br><span class="line">2588 etc-order-task-0.0.1-SNAPSHOT.jar</span><br><span class="line">10510 com.ai.opt.sdk.appserver.DubboServiceStart</span><br><span class="line">[tospouter01@webtest ~]$ jps -m</span><br><span class="line">11873 Jps -m</span><br><span class="line">19993 ConsumerServiceStart</span><br><span class="line">2588 jar --spring.config.location=/data/tospouter01/work/xxl-job-task/etc-order/config/application-test.properties --logging.config=/data/tospouter01/work/xxl-job-task/etc-order/config/logback.xml</span><br><span class="line">10510 DubboServiceStart</span><br><span class="line">[tospouter01@webtest ~]$ jps -v</span><br><span class="line">11924 Jps -Denv.class.path=.:/data/java/jdk1.8.0_151/lib/dt.jar:/data/java/jdk1.8.0_151/lib/tools.jar -Dapplication.home=/data/java/jdk1.8.0_151 -Xms8m</span><br><span class="line">19993 ConsumerServiceStart -Xms256m -Xmx512m -XX:PermSize=64M -XX:MaxPermSize=128M -Drunner.dmp.outer.kafka -Dlog4j.logtype=kafka -Dlog4j.baseDir=/data/tospouter01 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Dsun.net.inetaddr.ttl=10</span><br><span class="line">2588 jar -Xmx128m -Xms128m -Xmn32m -Xss256k -XX:+UseConcMarkSweepGC -XX:CMSFullGCsBeforeCompaction=5 -Dfile.encoding=UTF-8 -Dmybatis_config_path=/data/tospouter01/work/xxl-job-task/etc-order/config/mybatis-config.xml</span><br><span class="line">10510 DubboServiceStart -Xms128m -Xmx512m -Drunner.dmp.outer.dubbo.port=19183 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Dsun.net.inetaddr.ttl=10</span><br><span class="line">[tospouter01@webtest ~]$ </span><br></pre></td></tr></table></figure>
+<h1 id="jinfo"><a href="#jinfo" class="headerlink" title="jinfo"></a>jinfo</h1><blockquote>
+<p> Java 配置信息工具</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8d8aef212b25">https://www.jianshu.com/p/8d8aef212b25</a></p>
+<p><strong>主要用于实时查看和调整虚拟机各项参数</strong><br>jinfo  19993</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">[puaiuc@host-10-19-13-14 ~]$ jinfo 29895</span><br><span class="line">Attaching to process ID 29895, please wait...</span><br><span class="line">Debugger attached successfully.</span><br><span class="line">Server compiler detected.</span><br><span class="line">JVM version is 25.121-b13</span><br><span class="line">Java System Properties:</span><br><span class="line"></span><br><span class="line">java.runtime.name = Java(TM) SE Runtime Environment</span><br><span class="line">java.vm.version = 25.121-b13</span><br><span class="line">sun.boot.library.path = /data/opt/jdk1.8.0_121/jre/lib/amd64</span><br><span class="line">java.protocol.handler.pkgs = org.springframework.boot.loader</span><br><span class="line">java.vendor.url = http://java.oracle.com/</span><br><span class="line">java.vm.vendor = Oracle Corporation</span><br><span class="line">path.separator = :</span><br><span class="line">file.encoding.pkg = sun.io</span><br><span class="line">java.vm.name = Java HotSpot(TM) 64-Bit Server VM</span><br><span class="line">sun.os.patch.level = unknown</span><br><span class="line">sun.java.launcher = SUN_STANDARD</span><br><span class="line">user.country = US</span><br><span class="line">user.dir = /data/opt/jiangsu-zhihui/project/smart-sys-admin</span><br><span class="line">java.vm.specification.name = Java Virtual Machine Specification</span><br><span class="line">PID = 29895</span><br><span class="line">java.runtime.version = 1.8.0_121-b13</span><br><span class="line">java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment</span><br><span class="line">os.arch = amd64</span><br><span class="line">java.endorsed.dirs = /data/opt/jdk1.8.0_121/jre/lib/endorsed</span><br><span class="line">line.separator = </span><br><span class="line"></span><br><span class="line">java.io.tmpdir = /tmp</span><br><span class="line">java.vm.specification.vendor = Oracle Corporation</span><br><span class="line">os.name = Linux</span><br><span class="line">http.maxRedirects = 5</span><br><span class="line">sun.jnu.encoding = ANSI_X3.4-1968</span><br><span class="line">java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib</span><br><span class="line">spring.beaninfo.ignore = true</span><br><span class="line">sun.nio.ch.bugLevel = </span><br><span class="line">java.specification.name = Java Platform API Specification</span><br><span class="line">java.class.version = 52.0</span><br><span class="line">sun.management.compiler = HotSpot 64-Bit Tiered Compilers</span><br><span class="line">os.version = 3.10.0-862.el7.x86_64</span><br><span class="line">LOG_FILE = logs/debug.log</span><br><span class="line">user.home = /home/puaiuc</span><br><span class="line">user.timezone = Asia/Shanghai</span><br><span class="line">nacos.logging.path = /home/puaiuc/logs/nacos</span><br><span class="line">catalina.useNaming = false</span><br><span class="line">java.awt.printerjob = sun.print.PSPrinterJob</span><br><span class="line">file.encoding = ANSI_X3.4-1968</span><br><span class="line">@appId = smart-sys-admin-biz</span><br><span class="line">java.specification.version = 1.8</span><br><span class="line">catalina.home = /tmp/tomcat.7379101415221758730.9002</span><br><span class="line">user.name = puaiuc</span><br><span class="line">java.class.path = smart-sys-admin-biz-1.0.0.jar</span><br><span class="line">java.vm.specification.version = 1.8</span><br><span class="line">sun.arch.data.model = 64</span><br><span class="line">sun.java.command = smart-sys-admin-biz-1.0.0.jar --spring.config.location=/data/opt/jiangsu-zhihui/project/config/bootstrap-admin.yml</span><br><span class="line">java.home = /data/opt/jdk1.8.0_121/jre</span><br><span class="line">user.language = en</span><br><span class="line">java.specification.vendor = Oracle Corporation</span><br><span class="line">awt.toolkit = sun.awt.X11.XToolkit</span><br><span class="line">java.vm.info = mixed mode</span><br><span class="line">java.version = 1.8.0_121</span><br><span class="line">java.ext.dirs = /data/opt/jdk1.8.0_121/jre/lib/ext:/usr/java/packages/lib/ext</span><br><span class="line">sun.boot.class.path = /data/opt/jdk1.8.0_121/jre/lib/resources.jar:/data/opt/jdk1.8.0_121/jre/lib/rt.jar:/data/opt/jdk1.8.0_121/jre/lib/sunrsasign.jar:/data/opt/jdk1.8.0_121/jre/lib/jsse.jar:/data/opt/jdk1.8.0_121/jre/lib/jce.jar:/data/opt/jdk1.8.0_121/jre/lib/charsets.jar:/data/opt/jdk1.8.0_121/jre/lib/jfr.jar:/data/opt/jdk1.8.0_121/jre/classes</span><br><span class="line">java.awt.headless = true</span><br><span class="line">java.vendor = Oracle Corporation</span><br><span class="line">catalina.base = /tmp/tomcat.7379101415221758730.9002</span><br><span class="line">file.separator = /</span><br><span class="line">java.vendor.url.bug = http://bugreport.sun.com/bugreport/</span><br><span class="line">sun.io.unicode.encoding = UnicodeLittle</span><br><span class="line">sun.cpu.endian = little</span><br><span class="line">sun.cpu.isalist = </span><br><span class="line"></span><br><span class="line">VM Flags:</span><br><span class="line">Non-default VM flags: -XX:CICompilerCount=4 -XX:ConcGCThreads=2 -XX:G1HeapRegionSize=1048576 -XX:InitialHeapSize=134217728 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=134217728 -XX:MaxMetaspaceSize=134217728 -XX:MaxNewSize=79691776 -XX:MetaspaceSize=67108864 -XX:MinHeapDeltaBytes=1048576 -XX:ThreadStackSize=512 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseG1GC </span><br><span class="line">Command line:  -Xms128M -Xmx128M -Xss512k -XX:MetaspaceSize=64M -XX:MaxMetaspaceSize=128M -XX:+UseG1GC</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="jstat"><a href="#jstat" class="headerlink" title="jstat"></a>jstat</h1><!--虚拟机统计信息监视工具[jvm statistics monitoring tool]-->
+
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><blockquote>
+<p><strong>option：</strong> 参数选项<br><strong>-t：</strong> 可以在打印的列加上Timestamp列，用于显示系统运行的时间<br><strong>-h：</strong> 可以在周期性数据数据的时候，可以在指定输出多少行以后输出一次表头<br><strong>vmid：</strong> Virtual Machine ID（ 进程的 pid）<br><strong>interval：</strong> 执行每次的间隔时间，单位为毫秒<br><strong>count：</strong> 用于指定输出多少次记录，缺省则会一直打印</p>
+</blockquote>
+<p>​    <strong>option 可选参数</strong></p>
+<blockquote>
+<p>-class                 显示ClassLoad的相关信息；<br>-compiler           显示JIT编译的相关信息；<br><strong>-gc</strong>                     显示和gc相关的堆信息；<br>-gccapacity 　　  显示各个代的容量以及使用情况；<br>-gcmetacapacity 显示metaspace的大小<br>-gcnew               显示新生代信息；<br>-gcnewcapacity  显示新生代大小和使用情况；<br>-gcold                 显示老年代和永久代的信息；<br>-gcoldcapacity    显示老年代的大小；<br><strong>-gcutil</strong>　　           显示垃圾收集信息；<br>-gccause             显示垃圾回收的相关信息（同-gcutil）,同时显示最后一次或当前正在发生的垃圾回收的诱因；<br>-printcompilation 输出JIT编译的方法信息；</p>
+</blockquote>
+<h2 id="部分示例"><a href="#部分示例" class="headerlink" title="部分示例"></a>部分示例</h2><ol>
+<li>监控虚拟机内存使用情况</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 每隔1000ms打印一次记录，打印10次停止，每3行后打印指标头部</span></span><br><span class="line">jstat -gc 146478 10000 10</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[tospouter01@webtest ~]$ jstat -gc 19993</span><br><span class="line"><span class="meta">#</span><span class="bash"> jdk 1.8</span></span><br><span class="line">S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT   </span><br><span class="line">512.0  512.0  128.0   0.0   116736.0 47063.1   320512.0   310003.1  53976.0 52834.9 5848.0 5607.4 1741570 7978.997 1601   582.203 8561.200</span><br><span class="line">[tospouter01@webtest ~]$ </span><br><span class="line"><span class="meta">#</span><span class="bash"> jdk 1.7</span></span><br><span class="line"> S0C    S1C    S0U    S1U      EC       EU        OC        OU       PC     PU    YGC     YGCT    FGC    FGCT     GCT</span><br><span class="line">10752.0 10752.0 8317.5  0.0   131072.0 25699.0   173568.0   96.0    21504.0 15199.9      4    0.040   0      0.000    0.040</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>S0C：年轻代中第一个survivor（幸存区）的容量 （字节）</li>
+<li>S1C：年轻代中第二个survivor（幸存区）的容量 (字节)</li>
+<li>S0U ：年轻代中第一个survivor（幸存区）目前已使用空间 (字节)</li>
+<li>S1U ：年轻代中第二个survivor（幸存区）目前已使用空间 (字节)</li>
+<li>EC ：年轻代中Eden（伊甸园）的容量 (字节)</li>
+<li>EU ：年轻代中Eden（伊甸园）目前已使用空间 (字节)</li>
+<li>OC ：Old代的容量 (字节)</li>
+<li>OU ：Old代目前已使用空间 (字节)</li>
+<li>MC：metaspace(元空间)的容量 (字节)</li>
+<li>MU：metaspace(元空间)目前已使用空间 (字节)</li>
+<li>YGC ：从应用程序启动到采样时年轻代中gc次数</li>
+<li>YGCT ：从应用程序启动到采样时年轻代中gc所用时间(s)</li>
+<li>FGC ：从应用程序启动到采样时old代(全gc)gc次数</li>
+<li>FGCT ：从应用程序启动到采样时old代(全gc)gc所用时间(s)</li>
+<li>GCT：从应用程序启动到采样时gc用的总时间(s)<blockquote>
+<ul>
+<li>jdk 1.7  采用的是永久带</li>
+<li>PC    perm capacity</li>
+<li>PU   perm use </li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>查看垃圾回收记录</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> jstat -gcutil  pid time** 每隔 1000ms 输出一次gc情况</span></span><br><span class="line"></span><br><span class="line">[tosp01@client logs]$ jstat -gcutil 27087 1000</span><br><span class="line">  S0     S1     E      O      M     CCS    YGC     YGCT    FGC    FGCT     GCT   </span><br><span class="line"> 38.70   0.00   5.45  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   5.92  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   6.42  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   6.68  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   7.15  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   7.65  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   7.91  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br><span class="line"> 38.70   0.00   8.26  53.85  95.58  93.60     16    0.624     4    1.036    1.660</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>YGC ：           年轻代gc次数</li>
+</ul>
+</blockquote>
+<ul>
+<li>YGCT  ：        年轻代gc耗时</li>
+<li>FGC  ：           full gc 次数</li>
+<li>FGCT  ：        full gc 总耗时</li>
+<li>GCT  ：           总的gc耗时</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/213710fb9e40">jvm 性能调优工具之 jstat</a></p>
+<h1 id="jmap"><a href="#jmap" class="headerlink" title="jmap"></a>jmap</h1><!--java内存映像工具-->
+
+<ol>
+<li>jmap pid<br>打印目标虚拟机中加载的每个共享对象的起始地址、映射大小以及共享对象文件的路径全称</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">0x0000000000400000      7K      &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;bin&#x2F;java</span><br><span class="line">0x00007f7f168d3000      108K    &#x2F;usr&#x2F;lib64&#x2F;libresolv-2.17.so</span><br><span class="line">0x00007f7f16aed000      27K     &#x2F;usr&#x2F;lib64&#x2F;libnss_dns-2.17.so</span><br><span class="line">0x00007f7fbfdea000      86K     &#x2F;usr&#x2F;lib64&#x2F;libgcc_s-4.8.5-20150702.so.1</span><br><span class="line">0x00007f7fec087000      251K    &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libsunec.so</span><br><span class="line">0x00007f7fec8d4000      36K     &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libawt_headless.so</span><br><span class="line">0x00007f7feccdb000      754K    &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libawt.so</span><br><span class="line">0x00007f7fed5c5000      90K     &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libnio.so</span><br><span class="line">0x00007f8004304000      113K    &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libnet.so</span><br><span class="line">0x00007f800451b000      49K     &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libmanagement.so</span><br><span class="line">0x00007f8038c01000      125K    &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libzip.so</span><br><span class="line">0x00007f8038e1d000      60K     &#x2F;usr&#x2F;lib64&#x2F;libnss_files-2.17.so</span><br><span class="line">0x00007f8039030000      220K    &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libjava.so</span><br><span class="line">0x00007f803925c000      64K     &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;libverify.so</span><br><span class="line">0x00007f803946b000      43K     &#x2F;usr&#x2F;lib64&#x2F;librt-2.17.so</span><br><span class="line">0x00007f8039673000      1112K   &#x2F;usr&#x2F;lib64&#x2F;libm-2.17.so</span><br><span class="line">0x00007f8039975000      16615K  &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;jre&#x2F;lib&#x2F;amd64&#x2F;server&#x2F;libjvm.so</span><br><span class="line">0x00007f803a96c000      2077K   &#x2F;usr&#x2F;lib64&#x2F;libc-2.17.so</span><br><span class="line">0x00007f803ad2f000      19K     &#x2F;usr&#x2F;lib64&#x2F;libdl-2.17.so</span><br><span class="line">0x00007f803af33000      101K    &#x2F;data&#x2F;java&#x2F;jdk1.8.0_151&#x2F;lib&#x2F;amd64&#x2F;jli&#x2F;libjli.so</span><br><span class="line">0x00007f803b149000      141K    &#x2F;usr&#x2F;lib64&#x2F;libpthread-2.17.so</span><br><span class="line">0x00007f803b365000      160K    &#x2F;usr&#x2F;lib64&#x2F;ld-2.17.so</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>jmap -histo:live [pid]<br>查看当前Java进程创建的活跃对象数目和占用内存大小。</li>
+</ol>
+<ul>
+<li>bytes 表示总的大小</li>
+<li>instances 表示 实例个数<pre><code>![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703214510973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21lbmd4aWFuZ3FpaGFuZ3o=,size_16,color_FFFFFF,t_70)
+</code></pre>
+</li>
+</ul>
+<ol start="4">
+<li>jmap -heap pid<br>堆的摘要信息，包括使用的GC算法、堆配置信息和各内存区域内存使用信息<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">Attaching to process ID 399679, please wait...</span><br><span class="line">Debugger attached successfully.</span><br><span class="line">Server compiler detected.</span><br><span class="line">JVM version is 24.80-b11</span><br><span class="line"></span><br><span class="line">using thread-local object allocation.</span><br><span class="line">Parallel GC with 13 thread(s) ## 使用Parallel收集器，gc线程数13</span><br><span class="line"></span><br><span class="line">Heap Configuration:  ##堆配置情况，也就是JVM参数配置的结果[平常说的tomcat配置JVM参数，就是在配置这些]</span><br><span class="line">   MinHeapFreeRatio = 40 ##最小堆使用比例</span><br><span class="line">   MaxHeapFreeRatio = 70 ##最大堆可用比例</span><br><span class="line">   MaxHeapSize      = 2147483648 (2048.0MB) ##最大堆空间大小</span><br><span class="line">   NewSize          = 268435456 (256.0MB) ##新生代分配大小</span><br><span class="line">   MaxNewSize       = 268435456 (256.0MB) ##最大可新生代分配大小</span><br><span class="line">   OldSize          = 5439488 (5.1875MB) ##老年代大小</span><br><span class="line">   NewRatio         = 2  ##新生代比例</span><br><span class="line">   SurvivorRatio    = 8 ##新生代与suvivor的比例</span><br><span class="line">   PermSize         = 134217728 (128.0MB) ##perm区 永久代大小</span><br><span class="line">   MaxPermSize      = 134217728 (128.0MB) ##最大可分配perm区 也就是永久代大小</span><br><span class="line"></span><br><span class="line">Heap Usage: ##堆使用情况【堆内存实际的使用情况】</span><br><span class="line">New Generation (Eden + 1 Survivor Space):  ##新生代（伊甸区Eden区 + 幸存区survior(1+2)空间）</span><br><span class="line">   capacity = 241631232 (230.4375MB)  ##伊甸区容量</span><br><span class="line">   used     = 77776272 (74.17323303222656MB) ##已经使用大小</span><br><span class="line">   free     = 163854960 (156.26426696777344MB) ##剩余容量32.188004570534986% used ##使用比例</span><br><span class="line">Eden Space:  ##伊甸区</span><br><span class="line">   capacity = 214827008 (204.875MB) ##伊甸区容量</span><br><span class="line">   used     = 74442288 (70.99369812011719MB) ##伊甸区使用</span><br><span class="line">   free     = 140384720 (133.8813018798828MB) ##伊甸区当前剩余容量   34.65220164496263% used ##伊甸区使用情况</span><br><span class="line">From Space: ##survior1区</span><br><span class="line">   capacity = 26804224 (25.5625MB) ##survior1区容量</span><br><span class="line">   used     = 3333984 (3.179534912109375MB) ##surviror1区已使用情况</span><br><span class="line">   free     = 23470240 (22.382965087890625MB) ##surviror1区剩余容12.43827838477995% used ##survior1区使用比例</span><br><span class="line">To Space: ##survior2 区</span><br><span class="line">   capacity = 26804224 (25.5625MB) ##survior2区容量</span><br><span class="line">   used     = 0 (0.0MB) ##survior2区已使用情况</span><br><span class="line">   free     = 26804224 (25.5625MB) ##survior2区剩余容量 0.0% used ## survior2区使用比例</span><br><span class="line">PS Old  Generation: ##老年代使用情况</span><br><span class="line">   capacity = 1879048192 (1792.0MB) ##老年代容量</span><br><span class="line">   used     = 30847928 (29.41887664794922MB) ##老年代已使用容量</span><br><span class="line">   free     = 1848200264 (1762.5811233520508MB) ##老年代剩余容量</span><br><span class="line">   1.6416783843721663% used ##老年代使用比例</span><br><span class="line">Perm Generation: ##永久代使用情况-方法区</span><br><span class="line">   capacity = 134217728 (128.0MB) ##perm区容量</span><br><span class="line">   used     = 47303016 (45.111671447753906MB) ##perm区已使用容量</span><br><span class="line">   free     = 86914712 (82.8883285522461MB) ##perm区剩余容量  35.24349331855774% used ##perm区使用比例</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> jmap -dump:format=b,file=heapdump.phrof pid</li>
+</ul>
+<p> <strong>以hprof二进制格式转储Java堆到指定filename的文件中。live子选项是可选的。如果指定了live子选项，堆中只有活动的对象会被转储。想要浏览heap dump，你可以使用jhat(Java堆分析工具)读取生成的文件。</strong></p>
+<h1 id="jstack"><a href="#jstack" class="headerlink" title="jstack"></a>jstack</h1> <!--java 堆栈跟踪工具-->
+
+<p><strong>作用： 用于生成虚拟机当前时刻的线程快照  一般称为 threaddump</strong></p>
+<h1 id="jhat"><a href="#jhat" class="headerlink" title="jhat"></a>jhat</h1><p>虚拟机堆转储 【快照分析工具】</p>
+<p>一般用 eclipse memory analyzer**<br>jhat内置了一个微型的http/html服务器，生成dump文件的分析结果之后，可以在浏览器中查看。</p>
+<p>jhat -port 5000 java_pid4093.hprof</p>
+<p><a target="_blank" rel="noopener" href="http://ip:7000/">http://ip:7000</a></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/03/05/todolist/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/03/05/jvm/%E6%8C%87%E4%BB%A4/">
+                指令
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">John Doe</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

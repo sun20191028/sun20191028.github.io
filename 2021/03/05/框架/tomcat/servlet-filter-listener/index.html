@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		servlet-filter-listener | 
+	 
+	Hexo
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Hexo</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										db
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mongodb
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mongodb/%E8%84%9A%E6%9C%AC/">
+										脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mysql
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/sql/">
+										sql
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/">
+										运维操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/redis%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+										redis基础操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97/">
+										延时队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/jkd8/">
+										jkd8
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/">
+										字符集与编码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E9%94%81/">
+										锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										jvm
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/JVM%20%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/">
+										JVM 内存布局
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/class%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+										class 文件结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										jvm-垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%B8%B8%E9%87%8F%E6%B1%A0/">
+										jvm-常量池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm%E7%B1%BB%E5%8A%A0%E8%BD%BD/">
+										jvm类加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/linux%20%E5%AD%A6%E4%B9%A0/">
+										linux 学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
+										内存溢出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%80%BB%E7%BB%93/">
+										总结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%8C%87%E4%BB%A4/">
+										指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/">
+										虚拟机性能监控工具
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist/">
+										todolist
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist2/">
+										todolist2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop/hadoop%E5%AE%89%E8%A3%85/">
+										hadoop安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hbase
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hbase/hbase%E5%AE%89%E8%A3%85/">
+										hbase安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/docker/docker%E5%9F%BA%E7%A1%80/">
+										docker基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										idea
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/idea%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/">
+										idea项目简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/java%E5%90%AF%E5%8A%A8/">
+										java启动
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/linux/%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+										脚本学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E5%9F%BA%E7%A1%80/">
+										maven基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E9%AB%98%E7%BA%A7/">
+										maven高级
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
+										常用操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/">
+										开发手册
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										框架
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mybatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/mybatis/mybatis%E6%BA%90%E7%A0%81/">
+										mybatis源码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring cloud
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%20alibaba/">
+										spring cloud alibaba
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%E5%9F%BA%E7%A1%80/">
+										spring cloud基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/%E7%AC%94%E8%AE%B0/">
+										笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring mvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%B8%80/">
+										spring mvc源码一
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%BA%8C/">
+										spring mvc源码二
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tomcat
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/servlet-filter-listener/">
+										servlet-filter-listener
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/session-cookies/">
+										session-cookies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										登录认证
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/JWT/">
+										JWT
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/oauth2/">
+										oauth2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/spring%20security/">
+										spring security
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										消息队列
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										kafka
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/kafka/kafka%E5%9F%BA%E7%A1%80/">
+										kafka基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	servlet-filter-listener
+</h1>
+<div class="article-meta">
+	
+	<span>John Doe</span>
+	<span>2021-03-05 15:07:56</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<blockquote>
+<p><strong>filter 与 Interceptor的区别</strong></p>
+<ul>
+<li>Interceptor 的原理是基于动态代理-由spring mvc 引入，而filter 是基于链式模式的，由tomcat等web容器引入</li>
+<li>Interceptor 不拦截静态资源</li>
+</ul>
+</blockquote>
+<h1 id="集成listener、filter、servlet、Interceptor"><a href="#集成listener、filter、servlet、Interceptor" class="headerlink" title="集成listener、filter、servlet、Interceptor"></a>集成listener、filter、servlet、Interceptor</h1><h2 id="原生的web项目-添加-listener、filter、servlet"><a href="#原生的web项目-添加-listener、filter、servlet" class="headerlink" title="原生的web项目 添加 listener、filter、servlet"></a>原生的web项目 添加 listener、filter、servlet</h2><h2 id="spring-mvc-xml-添加-listener、filter、servlet、Interceptor"><a href="#spring-mvc-xml-添加-listener、filter、servlet、Interceptor" class="headerlink" title="spring mvc xml  添加 listener、filter、servlet、Interceptor"></a>spring mvc xml  添加 listener、filter、servlet、Interceptor</h2><blockquote>
+<p>在application.xml中配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mvc:interceptors</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">&quot;/mobile/command/**&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 匹配的请求，拦截 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:exclude-mapping</span> <span class="attr">path</span>=<span class="string">&quot;/mobile/command/navi/**&quot;</span> /&gt;</span> <span class="comment">&lt;!-- 匹配的请求，不拦截 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">&quot;com.ai.runner.dmp.interceptor.MobileSessionInterceptor&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mvc:interceptors</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="java-config-listener、filter、servlet、Interceptor"><a href="#java-config-listener、filter、servlet、Interceptor" class="headerlink" title="java config + listener、filter、servlet、Interceptor"></a>java config + listener、filter、servlet、Interceptor</h2><ol>
+<li>添加外部的  listener、filter、Interceptor</li>
+</ol>
+<blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationWebInitializer</span> <span class="keyword">extends</span> <span class="title">AbstractAnnotationConfigDispatcherServletInitializer</span>  </span>&#123;</span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStartup</span><span class="params">(ServletContext servletContext)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">         <span class="keyword">super</span>.onStartup(servletContext);</span><br><span class="line">         ServletRegistration.Dynamic userServlet = servletContext.addServlet(<span class="string">&quot;UserServlet&quot;</span>, UserServlet.class);</span><br><span class="line">         userServlet.addMapping(<span class="string">&quot;/user&quot;</span>);</span><br><span class="line">         userServlet.setLoadOnStartup(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">         FilterRegistration.Dynamic filter = servletContext.addFilter(<span class="string">&quot;myFilter&quot;</span>,DelegatingFilterProxy.class);</span><br><span class="line">         filter.addMappingForUrlPatterns(<span class="keyword">null</span>,<span class="keyword">false</span>,<span class="string">&quot;/*&quot;</span>);</span><br><span class="line"></span><br><span class="line">         servletContext.addListener(HttpSessionAttributeListener.class);</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MvcAnnotationConfig</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//添加拦截器并添加拦截器的拦截路径</span></span><br><span class="line">		registry.addInterceptor(<span class="keyword">new</span> DelegatingFilterProxy()).addPathPatterns(<span class="string">&quot;/*&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这个是在java8中使用的，spring版本也要更高</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyWebMvcConfigurer</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MyInterceptor myInterceptor;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//添加拦截器并添加拦截器的拦截路径</span></span><br><span class="line">        registry.addInterceptor(myInterceptor).addPathPatterns(<span class="string">&quot;/api/*&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ol start="2">
+<li>添加自定义的 listener、filter</li>
+</ol>
+<blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebFilter(filterName = &quot;zhangsan&quot;,urlPatterns = &quot;/*&quot;,initParams = &#123;</span></span><br><span class="line"><span class="meta">        @WebInitParam(name=&quot;name&quot;,value = &quot;zhangsan&quot;),</span></span><br><span class="line"><span class="meta">        @WebInitParam(name=&quot;age&quot;,value=&quot;24&quot;)&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FilterDemo</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">webListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="spring-boot添加listener、filter、servlet、Interceptor"><a href="#spring-boot添加listener、filter、servlet、Interceptor" class="headerlink" title="spring boot添加listener、filter、servlet、Interceptor"></a>spring boot添加listener、filter、servlet、Interceptor</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function">DomainInterceptor <span class="title">domainInterceptor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> DomainInterceptor();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">testFilterRegistration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        FilterRegistrationBean registration = <span class="keyword">new</span> FilterRegistrationBean();</span><br><span class="line">        registration.setFilter(<span class="keyword">new</span> OscarInterfaceTransferFilter());</span><br><span class="line">        registration.addUrlPatterns(<span class="string">&quot;/*&quot;</span>);</span><br><span class="line"><span class="comment">//        registration.addInitParameter(&quot;paramName&quot;, &quot;paramValue&quot;);</span></span><br><span class="line">        registration.setName(<span class="string">&quot;OscarInterfaceTransferFilter&quot;</span>);</span><br><span class="line">        registration.setOrder(<span class="number">99</span>);</span><br><span class="line">        <span class="keyword">return</span> registration;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ServletListenerRegistrationBean <span class="title">servletListenerRegistrationBean</span><span class="params">()</span></span>&#123;</span><br><span class="line">      ServletListenerRegistrationBean listenerRegistrationBean = <span class="keyword">new</span> ServletListenerRegistrationBean();</span><br><span class="line">      listenerRegistrationBean.setListener(<span class="keyword">new</span> MyContextListener());</span><br><span class="line">      <span class="keyword">return</span> listenerRegistrationBean;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>–&gt;示例代码 core-servlet-mvc-1.0 工程+apache-tomcat-7.0.79.</strong></p>
+<blockquote>
+<p>一个WebContent  就是tomcat中的一个 StandardContext 。与tomcat自带的 examples、root、host-manager、manager同属于一个StandardHost</p>
+<p><img src="https://img-blog.csdnimg.cn/20190816142235673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21lbmd4aWFuZ3FpaGFuZ3o=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</blockquote>
+<h1 id="Listener的定义与作用"><a href="#Listener的定义与作用" class="headerlink" title="Listener的定义与作用"></a>Listener的定义与作用</h1><blockquote>
+<p><strong>监听器Listener就是在application,session,request三个对象创建、销毁或者往其中添加修改删除属性时自动执行代码的功能组件。</strong><br>　　<strong>Listener是Servlet的监听器，可以监听客户端的请求，服务端的操作等</strong>。</p>
+</blockquote>
+<h2 id="listener触发时机"><a href="#listener触发时机" class="headerlink" title="listener触发时机"></a>listener触发时机</h2><blockquote>
+<p>context 的创建在系统启动的时候，适合做连接池初始化，context销毁时做连接池关闭的动作<br>context 的属性变化没什么监听的</p>
+<p>session的创建，通常在第一次请求经后台跳转到jsp页面的时创建（jsp默认开启session），session销毁一般等超时，或手动调用invalidate()<br>session属性变化，直接在session.setAttribute的时候直接触发</p>
+<p>request 的创建，在请求封装request的时候触发</p>
+<img src="E:\笔记\pic\image-20200910233902777.png" alt="image-20200910233902777" style="zoom: 67%;" />
+</blockquote>
+<h2 id="Listener的分类"><a href="#Listener的分类" class="headerlink" title="Listener的分类"></a>Listener的分类</h2><h3 id="ServletContext监听"><a href="#ServletContext监听" class="headerlink" title="ServletContext监听"></a>ServletContext监听</h3><h4 id="ServletContext的初始化和销毁"><a href="#ServletContext的初始化和销毁" class="headerlink" title="ServletContext的初始化和销毁"></a>ServletContext的初始化和销毁</h4><blockquote>
+<p>ServletContextListener：用于对Servlet整个上下文进行监听（创建、销毁）。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent sce)</span></span>;<span class="comment">//上下文初始化</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextDestroyed</span><span class="params">(ServletContextEvent sce)</span></span>;<span class="comment">//上下文销毁</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//ServletContextEvent事件：取得一个ServletContext（application）对象</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ServletContext <span class="title">getServletContext</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+<h4 id="ServletContextAttribute增加、修改、删除"><a href="#ServletContextAttribute增加、修改、删除" class="headerlink" title="ServletContextAttribute增加、修改、删除"></a>ServletContextAttribute增加、修改、删除</h4><blockquote>
+<p>ServletContextAttributeListener：对Servlet上下文属性的监听（增删改属性）。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeAdded</span><span class="params">(ServletContextAttributeEvent scab)</span></span>;<span class="comment">//增加属性</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeRemoved</span><span class="params">(ServletContextAttributeEvent scab)</span></span>;<span class="comment">//属性删除</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeRepalced</span><span class="params">(ServletContextAttributeEvent scab)</span></span>;<span class="comment">//属性替换（第二次设置同一属性）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//ServletContextAttributeEvent事件：能取得设置属性的名称与内容</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>;<span class="comment">//得到属性名称</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">getValue</span><span class="params">()</span></span>;<span class="comment">//取得属性的值</span></span><br></pre></td></tr></table></figure>
+<h3 id="Session监听"><a href="#Session监听" class="headerlink" title="Session监听"></a>Session监听</h3><blockquote>
+<p>Session属于http协议下的内容，接口位于javax.servlet.http.*包下。</p>
+</blockquote>
+<ul>
+<li><strong>session的销毁有两种情况</strong>：<blockquote>
+<ol>
+<li>session超时，web.xml配置：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>120<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span><span class="comment">&lt;!--session120分钟后超时销毁--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>手工使session失效<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invalidate</span><span class="params">()</span></span>;<span class="comment">//使session失效方法。session.invalidate();</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h4 id="HttpSession-的创建、销毁"><a href="#HttpSession-的创建、销毁" class="headerlink" title="HttpSession 的创建、销毁"></a>HttpSession 的创建、销毁</h4><blockquote>
+<p>HttpSessionListener接口：对Session的整体状态的监听。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sessionCreated</span><span class="params">(HttpSessionEvent se)</span></span>;<span class="comment">//session创建</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sessionDestroyed</span><span class="params">(HttpSessionEvent se)</span></span>;<span class="comment">//session销毁</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//HttpSessionEvent事件：</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> HttpSession <span class="title">getSession</span><span class="params">()</span></span>;<span class="comment">//取得当前操作的session</span></span><br></pre></td></tr></table></figure>
+<h4 id="HttpSessionAttribute增加、修改、删除"><a href="#HttpSessionAttribute增加、修改、删除" class="headerlink" title="HttpSessionAttribute增加、修改、删除"></a>HttpSessionAttribute增加、修改、删除</h4><blockquote>
+<p>HttpSessionAttributeListener接口：对session的属性监听。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeAdded</span><span class="params">(HttpSessionBindingEvent se)</span></span>;<span class="comment">//增加属性</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeRemoved</span><span class="params">(HttpSessionBindingEvent se)</span></span>;<span class="comment">//删除属性</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeReplaced</span><span class="params">(HttpSessionBindingEvent se)</span></span>;<span class="comment">//替换属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//HttpSessionBindingEvent事件：</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>;<span class="comment">//取得属性的名称</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">getValue</span><span class="params">()</span></span>;<span class="comment">//取得属性的值</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> HttpSession <span class="title">getSession</span><span class="params">()</span></span>;<span class="comment">//取得当前的session</span></span><br></pre></td></tr></table></figure>
+<h3 id="Request监听"><a href="#Request监听" class="headerlink" title="Request监听"></a>Request监听</h3><h4 id="ServletRequest的创建和销毁"><a href="#ServletRequest的创建和销毁" class="headerlink" title="ServletRequest的创建和销毁"></a>ServletRequest的创建和销毁</h4><blockquote>
+<p>ServletRequestListener：用于对Request请求进行监听（创建、销毁）。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public void requestInitialized(ServletRequestEvent sre);&#x2F;&#x2F;request初始化</span><br><span class="line">public void requestDestroyed(ServletRequestEvent sre);&#x2F;&#x2F;request销毁</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;ServletRequestEvent事件：</span><br><span class="line">public ServletRequest getServletRequest();&#x2F;&#x2F;取得一个ServletRequest对象</span><br><span class="line">public ServletContext getServletContext();&#x2F;&#x2F;取得一个ServletContext（application）对象</span><br></pre></td></tr></table></figure>
+<h4 id="ServletRequestAttribute增加、删除、修改"><a href="#ServletRequestAttribute增加、删除、修改" class="headerlink" title="ServletRequestAttribute增加、删除、修改"></a>ServletRequestAttribute增加、删除、修改</h4><blockquote>
+<p>ServletRequestAttributeListener：对Request属性的监听（增删改属性）。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeAdded</span><span class="params">(ServletRequestAttributeEvent srae)</span></span>;<span class="comment">//增加属性</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeRemoved</span><span class="params">(ServletRequestAttributeEvent srae)</span></span>;<span class="comment">//属性删除</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attributeReplaced</span><span class="params">(ServletRequestAttributeEvent srae)</span></span>;<span class="comment">//属性替换（第二次设置同一属性）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//ServletRequestAttributeEvent事件：能取得设置属性的名称与内容</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>;<span class="comment">//得到属性名称</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">getValue</span><span class="params">()</span></span>;<span class="comment">//取得属性的值</span></span><br></pre></td></tr></table></figure>
+<h2 id="在web-xml中配置"><a href="#在web-xml中配置" class="headerlink" title="在web.xml中配置"></a>在web.xml中配置</h2><blockquote>
+<p>Listener配置信息必须在Filter和Servlet配置之前，Listener的初始化（ServletContentListener初始化）比Servlet和Filter都优先，而销毁比Servlet和Filter都慢。</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.listener.class.ListenerClass<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/session-cookies/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  session-cookies
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%BA%8C/">
+                spring mvc
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">John Doe</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
