@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		java基础 | 
+	 
+	Hexo
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Hexo</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										db
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mongodb
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mongodb/%E8%84%9A%E6%9C%AC/">
+										脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mysql
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/sql/">
+										sql
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/mysql/%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/">
+										运维操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										redis
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2019/11/21/db/redis/redis%20%E9%94%81%E3%80%81%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95%E3%80%81%E6%A7%BD/">
+										redis 锁、一致性算法、槽
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/redis%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+										redis基础操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/db/redis/%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97/">
+										延时队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/21/java%E5%9F%BA%E7%A1%80/jdk/">
+										jdk
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/jkd8/">
+										jkd8
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/">
+										字符集与编码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/%E9%94%81/">
+										锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										jvm
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/JVM%20%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/">
+										JVM 内存布局
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/class%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+										class 文件结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										jvm-垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm-%E5%B8%B8%E9%87%8F%E6%B1%A0/">
+										jvm-常量池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/jvm%E7%B1%BB%E5%8A%A0%E8%BD%BD/">
+										jvm类加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/linux%20%E5%AD%A6%E4%B9%A0/">
+										linux 学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
+										内存溢出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%80%BB%E7%BB%93/">
+										总结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E6%8C%87%E4%BB%A4/">
+										指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/jvm/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7/">
+										虚拟机性能监控工具
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist/">
+										todolist
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/todolist2/">
+										todolist2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hadoop
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hadoop/hadoop%E5%AE%89%E8%A3%85/">
+										hadoop安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hbase
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%A4%A7%E6%95%B0%E6%8D%AE/hbase/hbase%E5%AE%89%E8%A3%85/">
+										hbase安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/docker/docker%E5%9F%BA%E7%A1%80/">
+										docker基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										idea
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/idea%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/">
+										idea项目简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/idea/java%E5%90%AF%E5%8A%A8/">
+										java启动
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/linux/%E8%84%9A%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+										脚本学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E5%9F%BA%E7%A1%80/">
+										maven基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B7%A5%E5%85%B7/maven/maven%E9%AB%98%E7%BA%A7/">
+										maven高级
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
+										常用操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/">
+										开发手册
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										框架
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										mybatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/mybatis/mybatis%E6%BA%90%E7%A0%81/">
+										mybatis源码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring cloud
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%20alibaba/">
+										spring cloud alibaba
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/spring%20cloud%E5%9F%BA%E7%A1%80/">
+										spring cloud基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20cloud/%E7%AC%94%E8%AE%B0/">
+										笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring core
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/spring%20mvc%20%E5%9F%BA%E7%A1%80/">
+										spring mvc 基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+										常用注解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										spring mvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%B8%80/">
+										spring mvc源码一
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/spring/spring%20mvc/spring%20mvc%E6%BA%90%E7%A0%81%E4%BA%8C/">
+										spring mvc源码二
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tomcat
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/servlet-filter-listener/">
+										servlet-filter-listener
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/tomcat/session-cookies/">
+										session-cookies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										登录认证
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/JWT/">
+										JWT
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/oauth2/">
+										oauth2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%A1%86%E6%9E%B6/%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81/spring%20security/">
+										spring security
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										消息队列
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										kafka
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/05/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/kafka/kafka%E5%9F%BA%E7%A1%80/">
+										kafka基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	redis 锁、一致性算法、槽
+</h1>
+<div class="article-meta">
+	
+	<span>John Doe</span>
+	<span>2019-11-21 13:44:57</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<p><strong>普通锁 lua脚本锁：</strong><a target="_blank" rel="noopener" href="https://gitee.com/sun20191028/redis-base">示例代码</a><br><strong>redisson</strong> <a target="_blank" rel="noopener" href="https://gitee.com/sun20191028/spring-boot-package">示例代码</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>setnx 只有当key不存在时才能成功，返回1。否则失败返回0<blockquote>
+<p>setnx 无法同时set时间，所以会出现set有效时间，失败的问题。</p>
+</blockquote>
+</li>
+<li>如果value值相同时，假如执行时间超过锁的超时时间，当别的线程又获得锁的时候，当前线程会将其他线程的锁给释放，所以value值应当使用不同的值。<blockquote>
+<p>新的问题是，释放锁的代码线程不安全。但是这已经能解决普遍的分布式锁的问题了，因为要出现在线程不安全的情况，需要同一个value值，出现在多线程中</p>
+</blockquote>
+</li>
+<li>通过lua脚本，将对比与释放包装成原子操作</li>
+</ol>
+<p>=====================================================================================================================</p>
+<h1 id="Redis-锁"><a href="#Redis-锁" class="headerlink" title="Redis 锁"></a>Redis 锁</h1><h2 id="悲观锁-乐观锁"><a href="#悲观锁-乐观锁" class="headerlink" title="悲观锁 | 乐观锁"></a>悲观锁 | 乐观锁</h2><h2 id="setnx"><a href="#setnx" class="headerlink" title="setnx"></a>setnx</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SETNX key value</span><br></pre></td></tr></table></figure>
+<p><strong>主要是利用SETNX 只有在 key 不存在时设置 key 的值才能成。成功时返回1，失败时返回0</strong><br><img src="https://img-blog.csdnimg.cn/20200606230352398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21lbmd4aWFuZ3FpaGFuZ3o=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cn.hutool.core.lang.Snowflake;</span><br><span class="line"><span class="keyword">import</span> cn.hutool.core.util.IdUtil;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisShardInfo;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisLockUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Jedis singleJedis;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        JedisShardInfo jedisShardInfo = <span class="keyword">new</span> JedisShardInfo(<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        singleJedis = <span class="keyword">new</span> Jedis(jedisShardInfo);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">(String lockKey,String value,<span class="keyword">int</span> seconds)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (singleJedis.setnx(lockKey, value) == <span class="number">1</span>)&#123;</span><br><span class="line">                singleJedis.expire(lockKey,seconds);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (singleJedis.ttl(lockKey) == -<span class="number">1</span>)&#123;<span class="comment">// 防止 上一步 expire执行出现问题，而catch块中删除出现异常，导致 lockKey 没有设置有效期</span></span><br><span class="line">                singleJedis.expire(lockKey,seconds);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line"></span><br><span class="line">            String lockValue = singleJedis.get(lockKey);</span><br><span class="line">            <span class="keyword">if</span> (value.equals(lockValue))&#123;</span><br><span class="line">                singleJedis.del(lockKey);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">unlock</span><span class="params">(String lockKey,String value)</span> </span>&#123;</span><br><span class="line">        String lockValue = singleJedis.get(lockKey);</span><br><span class="line">        <span class="keyword">if</span> (value.equals(lockValue))&#123;</span><br><span class="line">            singleJedis.del(lockKey);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">islock</span><span class="params">(String lockKey)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> singleJedis.exists(lockKey);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * debug模式，线程一加锁，线程二加锁失败。</span></span><br><span class="line"><span class="comment">     * 释放锁之后，线程三加锁，等待超过 5s。解锁失败</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String lockKey = <span class="string">&quot;t1&quot;</span>;</span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;<span class="comment">// 线程一</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Snowflake snowflake = IdUtil.createSnowflake(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">                String idStr = snowflake.nextIdStr();</span><br><span class="line">                <span class="keyword">boolean</span> isLock = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    isLock = tryLock(lockKey,idStr,<span class="number">30</span>);</span><br><span class="line">                    System.out.println(getName()+ <span class="string">&quot; idStr : &quot;</span> + idStr);</span><br><span class="line">                    System.out.println(getName()+ <span class="string">&quot; islock : &quot;</span>+ isLock);</span><br><span class="line">                &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (isLock)&#123;</span><br><span class="line">                        <span class="keyword">boolean</span> unlock = unlock(lockKey,idStr);</span><br><span class="line">                        System.out.println(getName()+ <span class="string">&quot; unlock : &quot;</span>+ unlock);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;<span class="comment">// 线程二</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Snowflake snowflake = IdUtil.createSnowflake(<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">                String idStr = snowflake.nextIdStr();</span><br><span class="line">                <span class="keyword">boolean</span> isLock = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    isLock = tryLock(lockKey,idStr,<span class="number">120</span>);</span><br><span class="line">                    System.out.println(getName()+ <span class="string">&quot; idStr : &quot;</span> + idStr);</span><br><span class="line">                    System.out.println(getName()+ <span class="string">&quot; islock : &quot;</span>+ isLock);</span><br><span class="line">                &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (isLock)&#123;</span><br><span class="line">                        <span class="keyword">boolean</span> unlock = unlock(lockKey,idStr);</span><br><span class="line">                        System.out.println(getName()+ <span class="string">&quot; unlock : &quot;</span>+ unlock);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;<span class="comment">// 线程三</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Snowflake snowflake = IdUtil.createSnowflake(<span class="number">3</span>,<span class="number">3</span>);</span><br><span class="line">                String idStr = snowflake.nextIdStr();</span><br><span class="line">                <span class="keyword">boolean</span> isLock = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    isLock = tryLock(lockKey,idStr,<span class="number">5</span>);</span><br><span class="line">                    System.out.println(getName()+ <span class="string">&quot; idStr : &quot;</span> + idStr);</span><br><span class="line">                    System.out.println(getName()+ <span class="string">&quot; islock : &quot;</span>+ isLock);</span><br><span class="line">                &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (isLock)&#123;</span><br><span class="line">                        <span class="keyword">boolean</span> unlock = unlock(lockKey,idStr);</span><br><span class="line">                        System.out.println(getName()+ <span class="string">&quot; unlock : &quot;</span>+ unlock);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><input disabled="" type="checkbox"> redis 的三种写法</li>
+<li>redis 锁固定的值，这种是肯定不行的，如上所示，要是出现线程3的情况，任务处理时间超过加锁的有效时间，线程3删除锁的时候，很有可能会把其他线程的锁删除。</li>
+<li>redis 锁不同的值，这种使用方式的担忧，往往是因为finally语句块中的代码是线程不安全，其实对于单个的锁定值（idStr） ，finally 语句块中出现并发的业务场景确实不多。<br>假如真的出现了（比如线程一里面，try语句块+ boolean isLock = false; 再出现并发，这也还是变成了问题一的写法，不同的线程锁同一个value，那为什么不能锁不通的value呢），如果 finally语句块中没有 if判断，确实会出现线程不安全的问题。但是加上 if 判断，就能够保证 unlock不出现并发。<br>其实这种写法已经能够解决日常开发中大部分情况了。</li>
+</ul>
+<p>进一步 验证 输出的 buffer10000行， atomicInteger = num</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cn.hutool.core.lang.Snowflake;</span><br><span class="line"><span class="keyword">import</span> cn.hutool.core.util.IdUtil;</span><br><span class="line"><span class="keyword">import</span> cn.hutool.core.util.StrUtil;</span><br><span class="line"><span class="keyword">import</span> com.zzl.redis.JedisUtil;</span><br><span class="line"><span class="keyword">import</span> com.zzl.redis.config.RedisPoolConfig;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.atomic.AtomicInteger;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisLockUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    private static Jedis singleJedis;</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> JedisPool jedisPool;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line"><span class="comment">//        JedisShardInfo jedisShardInfo = new JedisShardInfo(&quot;127.0.0.1&quot;, 6379);</span></span><br><span class="line"><span class="comment">//        singleJedis = JedisUtil.getSingleJedis(jedisShardInfo);</span></span><br><span class="line">        RedisPoolConfig config = <span class="keyword">new</span> RedisPoolConfig();</span><br><span class="line">        config.setAddr(<span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line">        config.setPort(<span class="number">6379</span>);</span><br><span class="line">        config.setAuth(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        config.setMaxIdle(<span class="number">200</span>);</span><br><span class="line">        config.setMaxActive(<span class="number">1024</span>);</span><br><span class="line">        config.setTestOnBorrow(<span class="keyword">true</span>);</span><br><span class="line">        config.setTimeOut(<span class="number">10000</span>);</span><br><span class="line">        jedisPool = JedisUtil.getJedisPool(config);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">(Jedis jedis,String lockKey,String value,<span class="keyword">int</span> seconds)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (jedis.setnx(lockKey, value) == <span class="number">1</span>)&#123;</span><br><span class="line">                jedis.expire(lockKey,seconds);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (jedis.ttl(lockKey) == -<span class="number">1</span>)&#123;<span class="comment">// 防止 上一步 expire执行出现问题，而catch块中删除出现异常，导致 lockKey 没有设置有效期</span></span><br><span class="line">                jedis.expire(lockKey,seconds);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line"></span><br><span class="line">            String lockValue = jedis.get(lockKey);</span><br><span class="line">            <span class="keyword">if</span> (value.equals(lockValue))&#123;</span><br><span class="line">                jedis.del(lockKey);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">unlock</span><span class="params">(Jedis jedis,String lockKey,String value)</span> </span>&#123;</span><br><span class="line">        String lockValue = jedis.get(lockKey);</span><br><span class="line">        <span class="keyword">if</span> (value.equals(lockValue))&#123;</span><br><span class="line">            jedis.del(lockKey);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">islock</span><span class="params">(Jedis jedis,String lockKey)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> jedis.exists(lockKey);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">        String lockKey = <span class="string">&quot;t1&quot;</span>;</span><br><span class="line"><span class="comment">//        ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);</span></span><br><span class="line">        ExecutorService executor = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line">        List&lt;Future&gt; futureList = <span class="keyword">new</span> ArrayList(<span class="number">10005</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10000</span>;i++)&#123;</span><br><span class="line">            EntityThread entityThread = <span class="keyword">new</span> EntityThread(lockKey,<span class="number">100</span>);</span><br><span class="line">            Future future = executor.submit(entityThread);</span><br><span class="line">            futureList.add(future);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (Future future : futureList)&#123;</span><br><span class="line">            future.get();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(buffer);</span><br><span class="line">        System.out.println(<span class="string">&quot;最终结果：atomicInteger = &quot;</span>+atomicInteger.get() + <span class="string">&quot;,num = &quot;</span> + num);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">EntityThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String lockKey;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> lockTime;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">EntityThread</span><span class="params">(String lockKey,<span class="keyword">int</span> lockTime)</span></span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.lockKey = lockKey;</span><br><span class="line">            <span class="keyword">this</span>.lockTime = lockTime;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            String idStr = snowflake.nextIdStr();</span><br><span class="line">            <span class="keyword">boolean</span> isLock = <span class="keyword">false</span>;</span><br><span class="line">            Jedis jedis = jedisPool.getResource();</span><br><span class="line">            String log=<span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (isLock = tryLock(jedis,lockKey,idStr,lockTime))&#123;</span><br><span class="line">                    doJob();</span><br><span class="line">                &#125;</span><br><span class="line">                log = Thread.currentThread().getName().concat(StrUtil.format(<span class="string">&quot;:isLock=&#123;&#125;,idStr=&#123;&#125;&quot;</span>,isLock,idStr));</span><br><span class="line">            &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">                <span class="keyword">boolean</span> unlock = unlock(jedis,lockKey,idStr);</span><br><span class="line">                log=log.concat(<span class="string">&quot; ,unlock : &quot;</span>+ unlock);</span><br><span class="line">                buffer.append(log+<span class="string">&quot;\r\n&quot;</span>);</span><br><span class="line">                JedisUtil.returnResource(jedisPool,jedis);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Snowflake snowflake = IdUtil.getSnowflake(<span class="number">3</span>,<span class="number">3</span>);<span class="comment">// 模仿不同的机器</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> StringBuffer buffer = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> num;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> AtomicInteger atomicInteger = <span class="keyword">new</span> AtomicInteger(<span class="number">0</span>);</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doJob</span><span class="params">()</span></span>&#123;</span><br><span class="line">        atomicInteger.incrementAndGet();</span><br><span class="line">        num = num+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.currentThread().sleep(<span class="number">10</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>很多请情况下，用上面的方式都可以解决。或者直接借助工具redisson。<br>上面的问题是，谁也没规定 加锁跟解锁 一定就只出现在同一个线程中，必须在一块。<br>假如不再一处，而且对于一个 idStr 出现在并发的 线程中解锁，那么解锁的线程安全性，就必须考虑。<br>这时候就需要借助lua 脚本来完成</p>
+<hr>
+<h2 id="lua脚本"><a href="#lua脚本" class="headerlink" title="lua脚本"></a>lua脚本</h2><p>它主要是利用 redis在执行 lua脚本时，一条lua语句，就是一个操作原子，因此在释放锁的时候，可以做到线程安全。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br></pre></td><td class="code"><pre><span class="line">import cn.hutool.core.util.IdUtil;</span><br><span class="line">import com.zzl.redis.entity.RedisLockInfo;</span><br><span class="line">import com.zzl.redis.JedisUtil;</span><br><span class="line">import com.zzl.redis.config.RedisPoolConfig;</span><br><span class="line">import lombok.AllArgsConstructor;</span><br><span class="line">import org.slf4j.Logger;</span><br><span class="line">import org.slf4j.LoggerFactory;</span><br><span class="line">import redis.clients.jedis.Jedis;</span><br><span class="line">import redis.clients.jedis.JedisPool;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.concurrent.*;</span><br><span class="line">import java.util.concurrent.atomic.AtomicBoolean;</span><br><span class="line"></span><br><span class="line">public class LuaRedisLock &#123;</span><br><span class="line">    private static final Logger logger &#x3D; LoggerFactory.getLogger(LuaRedisLock.class);</span><br><span class="line">    private static final String LUA_SCRIPT_LOCK &#x3D; &quot;return redis.call(&#39;set&#39;,KEYS[1],ARGV[1],&#39;NX&#39;,&#39;PX&#39;,ARGV[2])&quot;;&#x2F;&#x2F; 有效期以毫秒为单位</span><br><span class="line">&#x2F;&#x2F;    private static final String LUA_SCRIPT_LOCK &#x3D; &quot;return redis.call(&#39;set&#39;,KEYS[1],ARGV[1],&#39;NX&#39;,&#39;EX&#39;,ARGV[2])&quot;;</span><br><span class="line">    private static final String LUA_SCRIPT_UNLOCK &#x3D; &quot;if redis.call(&#39;get&#39;,KEYS[1]) &#x3D;&#x3D; ARGV[1] then return tostring(redis.call(&#39;del&#39;, KEYS[1])) else return &#39;0&#39; end&quot;;</span><br><span class="line"></span><br><span class="line">    private static String script_lock_sha ;</span><br><span class="line">    private static String script_unlock_sha ;</span><br><span class="line"></span><br><span class="line">    private static JedisPool jedisPool;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">&#x2F;&#x2F;        JedisShardInfo jedisShardInfo &#x3D; new JedisShardInfo(&quot;127.0.0.1&quot;, 6379);</span><br><span class="line">&#x2F;&#x2F;        singleJedis &#x3D; JedisUtil.getSingleJedis(jedisShardInfo);</span><br><span class="line">        RedisPoolConfig config &#x3D; new RedisPoolConfig();</span><br><span class="line">        config.setAddr(&quot;127.0.0.1&quot;);</span><br><span class="line">        config.setPort(6379);</span><br><span class="line">        config.setAuth(&quot;&quot;);</span><br><span class="line">        config.setMaxIdle(200);</span><br><span class="line">        config.setMaxActive(1024);</span><br><span class="line">        config.setTestOnBorrow(true);</span><br><span class="line">        config.setTimeOut(10000);</span><br><span class="line">        jedisPool &#x3D; JedisUtil.getJedisPool(config);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 其实加锁也可以直接用 jedis.setnx 完成</span><br><span class="line">     * @param jedis</span><br><span class="line">     * @param lockKey</span><br><span class="line">     * @param expireTime</span><br><span class="line">     * @param tryTimeout</span><br><span class="line">     * @return</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static RedisLockInfo tryLock(Jedis jedis, String lockKey, Long expireTime, Long tryTimeout)&#123;</span><br><span class="line">        long timestamp &#x3D; System.currentTimeMillis();</span><br><span class="line">        int tryCount &#x3D; 0;</span><br><span class="line">        String value  &#x3D; IdUtil.randomUUID();</span><br><span class="line">        List&lt;String&gt; ages &#x3D; new ArrayList();</span><br><span class="line">        ages.add(value);</span><br><span class="line">        ages.add(String.valueOf(expireTime));</span><br><span class="line">        while ((System.currentTimeMillis() - timestamp) &lt; tryTimeout) &#123;</span><br><span class="line">            tryCount++;</span><br><span class="line">            try&#123;</span><br><span class="line">&#x2F;&#x2F;                Object lockResult &#x3D; jedis.eval(LUA_SCRIPT_LOCK, Collections.singletonList(lockKey), ages);</span><br><span class="line">                Object lockResult &#x3D; jedis.evalsha(script_lock_sha, Collections.singletonList(lockKey), ages);</span><br><span class="line"></span><br><span class="line">                if (null !&#x3D; lockResult &amp;&amp; &quot;OK&quot;.equals(lockResult)) &#123;</span><br><span class="line">                    return new RedisLockInfo(value,lockKey,expireTime,tryTimeout,tryCount);</span><br><span class="line">                &#125;else &#123;</span><br><span class="line">                    Thread.sleep(50);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;catch (Exception e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">                return null;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static boolean releaseLock(Jedis jedis,RedisLockInfo redisLockInfo)&#123;</span><br><span class="line">        Object releaseResult &#x3D; jedis.evalsha(script_unlock_sha,Collections.singletonList(redisLockInfo.getRedisKey()),Collections.singletonList(redisLockInfo.getLockId()));</span><br><span class="line">        if(null !&#x3D;releaseResult &amp;&amp; &quot;1&quot;.equals(releaseResult))&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static String key1 &#x3D; &quot;luakey&quot;;</span><br><span class="line">    public static void main(String[] args) throws ExecutionException, InterruptedException &#123;</span><br><span class="line">        init(jedisPool);</span><br><span class="line">&#x2F;&#x2F;        baseTest();</span><br><span class="line">        concurrentTest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    private static void init(JedisPool jedisPool)&#123;</span><br><span class="line">        Jedis jedis &#x3D; jedisPool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            jedis.scriptFlush();&#x2F;&#x2F; 清除历史 缓存的  lua脚本</span><br><span class="line">            script_lock_sha &#x3D; jedis.scriptLoad(LUA_SCRIPT_LOCK);</span><br><span class="line">            logger.info(jedis.scriptExists(script_lock_sha).toString());</span><br><span class="line">            script_unlock_sha &#x3D; jedis.scriptLoad(LUA_SCRIPT_UNLOCK);</span><br><span class="line">            logger.info(jedis.scriptExists(script_unlock_sha).toString());</span><br><span class="line">        &#125;finally &#123;</span><br><span class="line">            JedisUtil.returnResource(jedisPool,jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 基础功能测试</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static void baseTest()&#123;</span><br><span class="line">        RedisLockInfo redisLockInfo &#x3D; tryLock(jedisPool.getResource(),key1,50*1000L,5*1000L);</span><br><span class="line">        logger.info(redisLockInfo.toString());</span><br><span class="line">        boolean flag &#x3D; releaseLock(jedisPool.getResource(),redisLockInfo);</span><br><span class="line">        redisLockInfo &#x3D; tryLock(jedisPool.getResource(),key1,50*1000L,50*1000L);</span><br><span class="line">        logger.info(redisLockInfo.toString());</span><br><span class="line">        flag &#x3D; releaseLock(jedisPool.getResource(),redisLockInfo);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 并发测试</span><br><span class="line">     *&#x2F;</span><br><span class="line">    private static ConcurrentLinkedQueue&lt;RedisLockInfo&gt; redisLockInfos &#x3D; new ConcurrentLinkedQueue&lt;&gt;();</span><br><span class="line">    private static AtomicBoolean isFinish &#x3D; new AtomicBoolean(false);</span><br><span class="line">    private static final ThreadPoolExecutor executor &#x3D; (ThreadPoolExecutor) Executors.newFixedThreadPool(20);</span><br><span class="line"></span><br><span class="line">    private static void concurrentTest() throws InterruptedException, ExecutionException &#123;</span><br><span class="line">        LockControlTask lockControlTask &#x3D; new LockControlTask();</span><br><span class="line">        FutureTask lockControlFutureTask &#x3D; new FutureTask(lockControlTask);</span><br><span class="line">        Thread lockControlThread &#x3D; new Thread(lockControlFutureTask);</span><br><span class="line">        lockControlThread.start();</span><br><span class="line"></span><br><span class="line">        List&lt;FutureTask&gt; futureTaskList &#x3D; new ArrayList&lt;&gt;(10000);</span><br><span class="line">        for (int i &#x3D;0;i&lt;1000;i++)&#123;</span><br><span class="line">            LockTask lockTask &#x3D; new LockTask();</span><br><span class="line">            FutureTask futureTask &#x3D; new FutureTask(lockTask);</span><br><span class="line">            Thread thread &#x3D; new Thread(futureTask);</span><br><span class="line">            thread.start();</span><br><span class="line">            futureTaskList.add(futureTask);</span><br><span class="line">            Thread.sleep(5);</span><br><span class="line">        &#125;</span><br><span class="line">        for (FutureTask futureTask : futureTaskList)&#123;</span><br><span class="line">            futureTask.get();</span><br><span class="line">        &#125;</span><br><span class="line">        isFinish.set(true);</span><br><span class="line">        lockControlFutureTask.get();</span><br><span class="line"></span><br><span class="line">        while (executor.getActiveCount()&gt;0)&#123;</span><br><span class="line">            Thread.sleep(500);</span><br><span class="line">        &#125;</span><br><span class="line">        executor.shutdown();</span><br><span class="line">        System.out.println(true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static class LockControlTask implements Callable&#123;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public Object call() throws Exception &#123;</span><br><span class="line">            while (!isFinish.get() || !redisLockInfos.isEmpty() )&#123;</span><br><span class="line">                RedisLockInfo redisLockInfo;</span><br><span class="line">                if (null !&#x3D; (redisLockInfo&#x3D; redisLockInfos.poll()))&#123;</span><br><span class="line">                    executor.submit(new ReleaseTask(redisLockInfo));</span><br><span class="line">                    executor.submit(new ReleaseTask(redisLockInfo));</span><br><span class="line">                    executor.submit(new ReleaseTask(redisLockInfo));</span><br><span class="line">                &#125;else &#123;</span><br><span class="line">                    try &#123;</span><br><span class="line">                        Thread.sleep(10);</span><br><span class="line">                    &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">&#x2F;&#x2F;                logger.info(&quot;&#123;&#125;&quot;,redisLockInfo);</span><br><span class="line">            &#125;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static class LockTask implements Callable&#123;</span><br><span class="line">        @Override</span><br><span class="line">        public Object call() throws Exception &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                Jedis jedis &#x3D; null;</span><br><span class="line">                try &#123;</span><br><span class="line">                    jedis &#x3D; jedisPool.getResource();</span><br><span class="line">                    RedisLockInfo redisLockInfo &#x3D; tryLock(jedis,key1,50L,200L);</span><br><span class="line">                    if(null!&#x3D;redisLockInfo)&#123;</span><br><span class="line">                        logger.info(&quot;加锁情况：&quot; +redisLockInfo);&#x2F;&#x2F; 记录所有的加锁信息</span><br><span class="line">                        redisLockInfos.add(redisLockInfo);&#x2F;&#x2F;null 不能插入</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;finally &#123;</span><br><span class="line">                    JedisUtil.returnResource(jedisPool,jedis);</span><br><span class="line">                &#125;</span><br><span class="line">                return &quot;&quot;;</span><br><span class="line">            &#125;catch (Exception e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @AllArgsConstructor</span><br><span class="line">    public static class ReleaseTask implements Runnable&#123;</span><br><span class="line">        RedisLockInfo redisLockInfo;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            Jedis jedis &#x3D; jedisPool.getResource();</span><br><span class="line">            try &#123;</span><br><span class="line">                boolean isRelease &#x3D; releaseLock(jedis,redisLockInfo);</span><br><span class="line">                if (isRelease)&#123;</span><br><span class="line">                    logger.info(&quot;解锁情况：&#123;&#125;,&#123;&#125;&quot;,isRelease,redisLockInfo);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;finally &#123;</span><br><span class="line">                JedisUtil.returnResource(jedisPool,jedis);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200608223419603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21lbmd4aWFuZ3FpaGFuZ3o=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>加锁的次数=解锁的次数，  中间有加锁失败，也有解锁失败的情况</p>
+<h2 id="redisson"><a href="#redisson" class="headerlink" title="redisson"></a>redisson</h2><p><a target="_blank" rel="noopener" href="https://github.com/redisson/redisson/wiki/Table-of-Content">redisson 官方文档</a><br>redission底层也应用了lua脚本以维持多步操作的原子性，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.redisson.Redisson;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonClient;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonReactiveClient;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonRxClient;</span><br><span class="line"><span class="keyword">import</span> org.redisson.config.ClusterServersConfig;</span><br><span class="line"><span class="keyword">import</span> org.redisson.config.Config;</span><br><span class="line"><span class="keyword">import</span> org.redisson.config.SingleServerConfig;</span><br><span class="line"><span class="keyword">import</span> org.redisson.config.TransportMode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedissonClientFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RedissonClient <span class="title">getSingleRedissonClient</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Redisson.create(getSingleBaseConfig());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RedissonReactiveClient <span class="title">getSingleRedissonClientReac</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Redisson.createReactive(getSingleBaseConfig());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RedissonRxClient <span class="title">getSingleRedissonClientRx</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Redisson.createRx(getSingleBaseConfig());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RedissonClient <span class="title">getClusterRedissonClient</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Redisson.create(getClusterBaseConfig());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Config <span class="title">getSingleBaseConfig</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Config config = getConfig();</span><br><span class="line">        SingleServerConfig serverConfig = config.useSingleServer()</span><br><span class="line">                .setAddress(<span class="string">&quot;redis://127.0.0.1:6379&quot;</span>)</span><br><span class="line">                .setTimeout(<span class="number">100000</span>)</span><br><span class="line">                .setConnectionPoolSize(<span class="number">5</span>)</span><br><span class="line">                .setConnectionMinimumIdleSize(<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">return</span> config;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Config <span class="title">getClusterBaseConfig</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Config config = getConfig();</span><br><span class="line">        ClusterServersConfig serverConfig = config.useClusterServers()</span><br><span class="line">                .addNodeAddress(<span class="string">&quot;redis://xx.xx.xx.xx:6379&quot;</span>)</span><br><span class="line">                .addNodeAddress(<span class="string">&quot;redis://xx.xx.xx.xx:6379&quot;</span>)</span><br><span class="line">                .addNodeAddress(<span class="string">&quot;redis://xx.xx.xx.xx:6379&quot;</span>).setPassword(<span class="string">&quot;uB5EDZiNVIsg&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> config;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Config <span class="title">getConfig</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Config config = <span class="keyword">new</span> Config();</span><br><span class="line">        config.setTransportMode(TransportMode.NIO);</span><br><span class="line">        <span class="keyword">return</span> config;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.redisson.Redisson;</span><br><span class="line"><span class="keyword">import</span> org.redisson.RedissonRedLock;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RLock;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RReadWriteLock;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisRLock</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RLock <span class="title">getRLock</span><span class="params">(Redisson redisson,String key)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> redisson.getLock(key);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取读写锁</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> redisson</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RReadWriteLock <span class="title">getRReadWriteLock</span><span class="params">(Redisson redisson,String key)</span></span>&#123;</span><br><span class="line">        RReadWriteLock rwlock = redisson.getReadWriteLock(key);</span><br><span class="line">        <span class="keyword">return</span> rwlock;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 红锁，主要是用于解决集群环境下，单个key的锁，假如key所分配的节点宕机，将导致死锁的问题。</span></span><br><span class="line"><span class="comment">     * 采用的是 一半以上的节点加锁成功 就算成功。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> redisson</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RedissonRedLock <span class="title">getRRedLock</span><span class="params">(Redisson redisson,String... key)</span></span>&#123;</span><br><span class="line">        RLock[] rLocks = <span class="keyword">new</span> RLock[key.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;key.length; i++)&#123;</span><br><span class="line">            rLocks[i] = getRLock(redisson,key[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        RedissonRedLock lock = <span class="keyword">new</span> RedissonRedLock(rLocks);</span><br><span class="line">        <span class="keyword">return</span> lock;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> rLock</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> lockTime 锁定的最长时间</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">(RLock rLock,<span class="keyword">int</span> lockTime)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> rLock.tryLock(lockTime, TimeUnit.SECONDS);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> rLock</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> waitTime 等待获取锁的最长时间</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> lockTime 锁定的最长时间</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">tryLock</span><span class="params">(RLock rLock,<span class="keyword">int</span> waitTime,<span class="keyword">int</span> lockTime)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> rLock.tryLock(waitTime,lockTime, TimeUnit.SECONDS);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Redis-一致性算法"><a href="#Redis-一致性算法" class="headerlink" title="Redis 一致性算法"></a>Redis 一致性算法</h1><h1 id="Redis-槽"><a href="#Redis-槽" class="headerlink" title="Redis 槽"></a>Redis 槽</h1>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  spring core
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">John Doe</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

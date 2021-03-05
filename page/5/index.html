@@ -185,6 +185,15 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
+									<a href="/2019/11/21/db/redis/redis%20%E9%94%81%E3%80%81%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95%E3%80%81%E6%A7%BD/">
+										redis 锁、一致性算法、槽
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/03/05/db/redis/redis%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
 										redis基础操作
 									</a>
@@ -216,6 +225,15 @@ var _hmt = _hmt || [];
 										java基础
 									</a>
 									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/21/java%E5%9F%BA%E7%A1%80/jdk/">
+										jdk
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 							<ul>
 								<li class="file">
 									<a href="/2021/03/05/java%E5%9F%BA%E7%A1%80/jkd8/">
@@ -638,6 +656,35 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										spring core
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/spring%20mvc%20%E5%9F%BA%E7%A1%80/">
+										spring mvc 基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+										常用注解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										spring mvc
 									</a>
 									
@@ -887,6 +934,105 @@ BIGINT
 			</a>
                 <div class="article-meta">
 				    <span>2021-03-05</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2019/11/21/java%E5%9F%BA%E7%A1%80/jdk/">
+				<h2 class="index-title">
+					jdk
+				</h2>
+				<div class="index-brief">
+					基础
+++a  先加再用  a++ 先用再加，比如常用的for循环
++= 是简写，a += 1就是a = a+1，  =+并不是简写，a =+ a直接对a的赋值，±符号代表的是正负，即 a=+1  其实就是 a=1
+
+
+方法的入参，为当前方法声明的局部变量，传参只是传引用，所以下面两种都不会改变。
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-11-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/spring%20mvc%20%E5%9F%BA%E7%A1%80/">
+				<h2 class="index-title">
+					spring mvc 基础
+				</h2>
+				<div class="index-brief">
+					示例代码（spring-mvc-01）
+Spitter
+加入了过滤器
+
+
+@WebFilter 的实现
+Interceptor 拦截器的实现，不拦截静态资源
+
+
+加入了监听器
+
+
+@WebListener 的实现
+
+
+WebApplicationInitializer 的实现，动态添加 filter
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-11-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2019/11/21/%E6%A1%86%E6%9E%B6/spring/spring%20core/%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+				<h2 class="index-title">
+					常用注解
+				</h2>
+				<div class="index-brief">
+					123456789// 用于响应时间的时候，日期格式化   @ApiModelProperty(value = &quot;安装时间&quot; )   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = &quot;yyyy-MM-dd H
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-11-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2019/11/21/db/redis/redis%20%E9%94%81%E3%80%81%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95%E3%80%81%E6%A7%BD/">
+				<h2 class="index-title">
+					redis 锁、一致性算法、槽
+				</h2>
+				<div class="index-brief">
+					普通锁 lua脚本锁：示例代码redisson 示例代码
+总结
+setnx 只有当key不存在时才能成功，返回1。否则失败返回0
+setnx 无法同时set时间，所以会出现set有效时间，失败的问题。
+
+
+如果value值相同时，假如执行时间超过锁的超时时间，当别的线程又获得锁的时候，当前线程会将其
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-11-21</span>
                     
                             
                     
